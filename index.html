@@ -27,7 +27,7 @@ Add Socials right below skill icons.
 
     </header>
     <section class="left">
-        <img class="IntroImage" src="images/Geno.jpg">
+        <img class="IntroImage" alt="Portfolio Image" src="images/Geno.jpg">
         <p class="SE">Software Engineer (Full-Stack)</p>
         <div class="intro-icons">
         <span class="intro-icon custom-icon"></span>
@@ -41,13 +41,13 @@ Add Socials right below skill icons.
         </div>
 
         <div class="social-icons">
-            <i class="fa fa-linkedin fa-lg"></i>
-        <i class="fa fa-github fa-lg"></i>
+           <a href="https://www.linkedin.com/in/eugene-brown-jr-38210b99/"><i class="fa fa-linkedin fa-lg social-icon"></i></a> 
+        <a href="https://github.com/builde7b0b"><i class="fa fa-github fa-lg social-icon"></i></a>
         </div>
         
         <!-- Add a green code box similar to a matrix movie style terminal here with a short about me section-->
         <div class="code-box">
-            <div class="code-line"><span class="code-prompt">G_Neo@yourbase:</span><span class="code-directory">~</span>$<span class="code-ooutput">Hi there! I'm Eugene Brown, an experienced software developer and coder. With expertise in HTML, CSS, JavaScript, and front-end frameworks, I create custom solutions that meet each client's unique needs. I'm committed to delivering high-quality results on time and within budget. Let's work together to bring your ideas to life.</span></div>
+            <div class="code-line"><span class="code-prompt">G_Neo@yourbase:</span><span class="code-directory">~</span>$<span class="code-output"></span></div>
         </div>
     </section>
     <main>
@@ -82,12 +82,12 @@ Add Socials right below skill icons.
         
         </div>
         <div class="resource-container">
-        <a href="#" class="blog-link">
+        <a href="http://ecbjr-dev.xyz/" class="blog-link">
             <span class="blog-icon"><i class="fa fa-pencil"></i></span>
             <span class="blog-label"> Blog</span>
 
         </a>
-        <a href="#" class="blog-link">
+        <a href="https://github.com/builde7b0b?tab=repositories" class="blog-link">
             <span class="blog-icon"><i class="fa fa-code"></i></span>
             <span class="blog-label">Code</span>
             
@@ -106,4 +106,34 @@ Add Socials right below skill icons.
 
 
     </footer>
+
+
+    <script>
+            // START PROMPT FUNCTIONALITY 
+
+            // define string called text to display in the code output class element
+            // select it with document.querySelector() 
+
+        const text = "Hi there! I'm Eugene Brown, an experienced software developer and coder. With expertise in HTML, CSS, JavaScript, and front-end frameworks, I create custom solutions that meet each client's unique needs. I'm committed to delivering high-quality results on time and within budget. Let's work together to bring your ideas to life.";
+
+            // Store result of our selection in variable 
+        const outputE1 = document.querySelector('.code-output');
+
+            // create function to add or "type" each character into the prompt one at a time with a delay of 50 milliseconds betwen each character.
+            // setTimeout is used to create this delay
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                outputE1.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 50);
+
+            }
+        }
+            // call this function when the page loads.
+        type();
+    </script>
+        
+        
+
   </body>
