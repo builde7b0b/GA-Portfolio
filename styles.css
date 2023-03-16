@@ -1,0 +1,362 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+body {
+        /* How do we initialize CSS Grid? */
+      display: grid;
+      grid-template-rows: 80px 1fr 80px;
+      grid-template-columns: 1fr 1fr;
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+      padding; 0;
+      height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+    }
+    
+    
+    
+    header {
+    
+        grid-row: 1;
+        grid-column: 1 / span 3;
+        background: black;
+        border: solid grey 2px;
+      
+    
+    }
+
+
+    .SE {
+        color: lime;
+    }
+
+
+
+    .IntroImage {
+        border: solid black 5px;
+    }
+    
+/* Start styling for about section and code box: */
+.code-box {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    border:#ccc 5px solid;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(88, 121, 88, 0.5);
+    overflow: hidden;
+}
+
+.code-line {
+    display: flex;
+    align-items: center;
+
+}
+
+.code-prompt {
+    color: white;
+    background-color: black;
+}
+
+.code-text {
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+
+.code-output {
+    margin-left: 10px; 
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: black;
+}
+
+
+
+
+
+
+/* SECOND COLUMN STYLING STARTS HERE */
+
+
+
+    main {
+      grid-row: 2;
+        grid-column: 2;
+        background-color: lime;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+
+    /* style the a tags and link bubbles */
+a { 
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 20px; 
+    /* This isn't needed with project container addition */
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* add an effect to links */
+a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* add so we can add more projects in the same column */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* set the grid to have 1 column */
+    grid-gap: 20px;
+  }
+
+
+.project-link {
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400');
+
+}
+
+/* add the ability to change the color or each bubble */
+.project-link:nth-child(1) {
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400');
+  }
+  
+  .project-link:nth-child(2) {
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400');
+  }
+  
+  .project-link:nth-child(3) {
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400');
+  }
+  
+  .project-link:nth-child(4) {
+    background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400');
+  }
+
+.blog-link {
+    background-image: url('https://images.pexels.com/photos/5474038/pexels-photo-5474038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.project-icon, .blog-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-icon i, .blog-icon i {
+    font-size: 36px;
+}
+
+/* This center's the text or labels within each bubble link */
+.project-label, .blog-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+
+
+
+    footer {
+    grid-row: 3 / span 4;
+    grid-column: 1 / span 3;
+    background: black;
+    
+    }
+    
+    .left {
+    grid-row: 2;
+      grid-column: 1;
+      background: black;
+      
+      
+    }
+    
+    .right {
+    grid-row: 2;
+      grid-column: 3;
+      background: mistyrose; 
+      
+     
+    }
+
+
+    
+
+
+
+
+/* Adds an Custom Icon below the Intro Section */
+/* Later we'll make these icons responsive on mouseover etc. */
+/* Create the styling for Intro Icons to display next to each other "Block" */
+.intro-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .intro-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+  }
+
+
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+    .custom-icon {
+        display:flex;
+        justify-content: flex-start;
+
+        background-image: url('https://cdn-icons-png.flaticon.com/128/6188/6188094.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+
+    .custom-icon2 {
+        display:flex;
+        justify-content: flex-start;
+        background-image: url('https://cdn-icons-png.flaticon.com/128/2115/2115955.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+    .custom-icon3 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/1183/1183673.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+    .custom-icon4 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/1183/1183672.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+    .custom-icon5 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/5968/5968292.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+    .custom-icon6 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/4494/4494740.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+    .custom-icon7 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/1183/1183672.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+    .custom-icon8 {
+        background-image: url('https://cdn-icons-png.flaticon.com/128/919/919826.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+    .custom-icon9 {
+        background-image: url('https://cdn-icons-png.flaticon.com/512/5968/5968267.png');
+       
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+
+    /* List of icons:
+    
+    https://cdn-icons-png.flaticon.com/128/1183/1183672.png
+    https://cdn-icons-png.flaticon.com/128/1183/1183673.png
+    https://cdn-icons-png.flaticon.com/128/5968/5968292.png
+    https://cdn-icons-png.flaticon.com/128/4494/4494740.png
+
+
+
+    https://cdn-icons-png.flaticon.com/512/5968/5968267.png
+https://cdn-icons-png.flaticon.com/128/919/919826.png
+
+    
+    */
+
+
+
+
+
+
+
+.footer-text {
+    font-size: 9px;
+    
+    color: white;
+}
