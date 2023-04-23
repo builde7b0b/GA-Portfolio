@@ -1,6 +1,7 @@
 # GA-Portfolio
 This is a simple portfolio website that I created during my bootcamp, showcasing some of my projects and blog posts. It features HTML/CSS/JS, and utilizes various technologies such as React, Node, Three.js, and Vanilla.
 
+[Screenshot](https://i.imgur.com/yP3kXNl.png)
 
 ## Table of Contents
 - Technologies Used
